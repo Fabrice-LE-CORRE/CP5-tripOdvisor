@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 /**
  * @file Chef d'orchestre : appelle les autres scripts
  */
@@ -5,5 +6,5 @@
 window.addEventListener('DOMContentLoaded', function () {
   // une fois qu'on est prêt,
   // on lance le script pour gérer la newsletter
-  newsletter.init();  
+  newsletter.init();
 });
