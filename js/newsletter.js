@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 /**
  * @file Script dédié à la fonctionnalité Newsletter
  */
@@ -131,10 +132,18 @@ const newsletter = {
     // on bloque la soumission et on affiche l'erreur
     if (badEmail) {
       event.preventDefault();
-      alert('Bad email');
+      // alert('Bad email');
+      message.addTo(
+        'Les emails jetables sont interdits',
+        newsletter.formElement
+      );
     } else {
       newsletter.hide();
-      alert('Merci de votre inscription !');
+      // alert('Merci de votre inscription !');
+      message.addTo(
+        '<strong>Bienvenue !</strong> Merci de votre intérêt ♥',
+        document.body
+      );
     }
   }
 
