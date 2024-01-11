@@ -3,7 +3,22 @@
  */
 const newsletter = {
   element: document.querySelector('.newsletter'),
+  formElement: document.querySelector('.newsletter form'),
   emailElement: document.getElementById('subscriber-email'),
+
+  forbiddenDomains: [
+    '@yopmail.com',
+    '@yopmail.fr',
+    '@yopmail.net',
+    '@cool.fr.nf',
+    '@jetable.fr.nf',
+    '@courriel.fr.nf',
+    '@moncourrier.fr.nf',
+    '@monemail.fr.nf',
+    '@monmail.fr.nf',
+    '@hide.biz.st',
+    '@mymail.infos.st',
+  ],
 
   /*
     Dans un objet, on ajoute des PROPRIÉTÉS en utilisant un
@@ -48,6 +63,10 @@ const newsletter = {
 
     // scroll de la page
     window.addEventListener('scroll', newsletter.scroll);
+
+    // soumission du formulaire
+    newsletter.formElement
+      .addEventListener('submit', newsletter.submit);
   },
 
   show(event = null) {
@@ -86,5 +105,37 @@ const newsletter = {
     }
   },
 
-};
+  submit(event) {
+    const email = newsletter.emailElement.value;
+    console.log(email);
 
+    let badEmail = false;
+
+    for (const domain of newsletter.forbiddenDomains) {
+      // pour chaque élément de tableau,
+      // à chaque tout de boucle,
+      // il assigne la valeur à la variable `domain`
+
+      // SI l'email contient `domain`
+      //    ALORS je bloque la soumission et j'affiche une erreur
+      // → je passe `badEmail` à true
+      if (email.includes(domain)) {
+        badEmail = true;
+        // dès qu'on en a trouvé un mauvais,
+        // inutile de continuer → je sors de la boucle
+        break;
+      }
+    }
+
+    // quand on a un mail interdit,
+    // on bloque la soumission et on affiche l'erreur
+    if (badEmail) {
+      event.preventDefault();
+      alert('Bad email');
+    } else {
+      newsletter.hide();
+      alert('Merci de votre inscription !');
+    }
+  }
+
+};
