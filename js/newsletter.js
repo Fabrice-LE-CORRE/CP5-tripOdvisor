@@ -133,14 +133,14 @@ const newsletter = {
     if (badEmail) {
       event.preventDefault();
       // alert('Bad email');
-      message.addTo(
+      message.error(
         'Les emails jetables sont interdits',
         newsletter.formElement
       );
     } else {
       newsletter.hide();
       // alert('Merci de votre inscription !');
-      message.addTo(
+      message.success(
         '<strong>Bienvenue !</strong> Merci de votre intérêt ♥',
         document.body
       );

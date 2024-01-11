@@ -8,9 +8,9 @@ const message = {
    * @param {string} content - Le contenu du message
    * @param {HTMLElement} parent - Où afficher le message ?
    */
-  addTo(content, parent) {
+  addTo(content, parent, type = 'default') {
     const messageElement = document.createElement('div');
-    messageElement.classList.add('message');
+    messageElement.classList.add('message', `message--${type}`);
     messageElement.innerHTML = content;
 
     parent.prepend(messageElement);
@@ -18,6 +18,13 @@ const message = {
     // `setTimeout` exécute du code passé en handler
     // au bout de X ms
     setTimeout(message.remove, 2000);
+  },
+
+  success(content, parent) {
+    message.addTo(content, parent, 'success');
+  },
+  error(content, parent) {
+    message.addTo(content, parent, 'error');
   },
 
   remove() {

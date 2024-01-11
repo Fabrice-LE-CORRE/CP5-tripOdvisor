@@ -65,9 +65,21 @@ strong {
 .message {
   padding: 1rem;
   border-radius: 3px;
+  background-color: #ccc;
+  color:#000;
+  margin-bottom: 1rem;
+}
+.message--success {
+  background: #1b6d1f;
+  color: #fff;
+}
+.message--error {
+  background: #bc200e;
+  color: #fff;
+}
+.message--warning {
   background-color: rgb(250, 228, 185);
   color:rgb(109, 76, 18);
-  margin-bottom: 1rem;
 }
 
 /* top */
