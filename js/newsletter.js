@@ -35,6 +35,10 @@ const newsletter = {
     // clic sur l'élément de menu
     document.getElementById('newsletter-btn')
       .addEventListener('click', newsletter.open);
+
+    // clic sur le bouton de fermeture du bloc
+    document.querySelector('.newsletter__close')
+      .addEventListener('click', newsletter.close);
   },
 
   open(event) {
@@ -47,5 +51,13 @@ const newsletter = {
     // ouvre = enlever la classe `newsletter--hidden`
     newsletter.element.classList.remove('newsletter--hidden');
   },
+
+  // je ne me sers d'`event`, je ne suis pas obligé de
+  // le récupérer en paramètre
+  close() {
+    // ferme = ajouter la classe `newsletter--hidden`
+    newsletter.element.classList.add('newsletter--hidden');
+  },
+
 };
 
