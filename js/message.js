@@ -26,6 +26,10 @@ const message = {
   error(content, parent) {
     message.addTo(content, parent, 'error');
   },
+  // utilisation des fléchées
+  warning: (content, parent) => {
+    message.addTo(content, parent, 'warning');
+  },
 
   remove() {
     const messages = document.querySelectorAll('.message');
@@ -33,5 +37,5 @@ const message = {
     for (const oldMessage of messages) {
       oldMessage.remove();
     }
-  }
+  },
 };
