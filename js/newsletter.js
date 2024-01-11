@@ -3,6 +3,7 @@
  */
 const newsletter = {
   element: document.querySelector('.newsletter'),
+  emailElement: document.getElementById('subscriber-email'),
 
   /*
     Dans un objet, on ajoute des PROPRIÉTÉS en utilisant un
@@ -50,6 +51,9 @@ const newsletter = {
     // console.log('ouvre la newsletter');
     // ouvre = enlever la classe `newsletter--hidden`
     newsletter.element.classList.remove('newsletter--hidden');
+
+    // je donne le focus au champ de formulaire
+    newsletter.emailElement.focus();
   },
 
   // je ne me sers d'`event`, je ne suis pas obligé de
