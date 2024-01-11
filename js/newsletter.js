@@ -45,10 +45,13 @@ const newsletter = {
     window.addEventListener('scroll', newsletter.scroll);
   },
 
-  show(event) {
-    // empêche le comportement par défaut d'un lien
-    // = ouverture d'une nouvelle page
-    event.preventDefault();
+  show(event = null) {
+    // if (event !== null) {
+    if (event) {
+      // empêche le comportement par défaut d'un lien
+      // = ouverture d'une nouvelle page
+      event.preventDefault();
+    }
 
     // mon intention
     // console.log('ouvre la newsletter');
@@ -66,8 +69,11 @@ const newsletter = {
     newsletter.element.classList.add('newsletter--hidden');
   },
 
-  scroll() {
-    console.log(window.scrollY);
+  scroll() {    
+    if (window.scrollY > 300) {
+      console.log(window.scrollY);
+      newsletter.show();
+    }
   },
 
 };
