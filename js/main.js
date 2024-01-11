@@ -7,4 +7,7 @@ window.addEventListener('DOMContentLoaded', function () {
   // une fois qu'on est prêt,
   // on lance le script pour gérer la newsletter
   newsletter.init();
+
+  // Switch theme
+  document.getElementById('theme-switch').addEventListener('click', theme.toggleDark);
 });
