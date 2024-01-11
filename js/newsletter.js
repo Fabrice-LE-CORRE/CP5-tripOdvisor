@@ -35,7 +35,12 @@ const newsletter = {
 
     // clic sur l'élément de menu
     document.getElementById('newsletter-btn')
-      .addEventListener('click', newsletter.show);
+      .addEventListener(
+        'click',
+        newsletter.show,
+        { once: true } // l'écouteur est actif seulement une fois
+        // note : ici c'est juste pour un rappel
+      );
 
     // clic sur le bouton de fermeture du bloc
     document.querySelector('.newsletter__close')
@@ -73,6 +78,11 @@ const newsletter = {
     if (window.scrollY > 300) {
       console.log(window.scrollY);
       newsletter.show();
+
+      // on veut déclencher l'ouverture de la newsletter
+      // qu'une seule fois,
+      // → après le 1er déclenchement, on supprime l'évènement
+      window.removeEventListener('scroll', newsletter.scroll);
     }
   },
 
