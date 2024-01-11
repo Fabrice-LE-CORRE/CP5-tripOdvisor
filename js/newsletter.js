@@ -35,14 +35,17 @@ const newsletter = {
 
     // clic sur l'élément de menu
     document.getElementById('newsletter-btn')
-      .addEventListener('click', newsletter.open);
+      .addEventListener('click', newsletter.show);
 
     // clic sur le bouton de fermeture du bloc
     document.querySelector('.newsletter__close')
-      .addEventListener('click', newsletter.close);
+      .addEventListener('click', newsletter.hide);
+
+    // scroll de la page
+    window.addEventListener('scroll', newsletter.scroll);
   },
 
-  open(event) {
+  show(event) {
     // empêche le comportement par défaut d'un lien
     // = ouverture d'une nouvelle page
     event.preventDefault();
@@ -58,9 +61,13 @@ const newsletter = {
 
   // je ne me sers d'`event`, je ne suis pas obligé de
   // le récupérer en paramètre
-  close() {
+  hide() {
     // ferme = ajouter la classe `newsletter--hidden`
     newsletter.element.classList.add('newsletter--hidden');
+  },
+
+  scroll() {
+    console.log(window.scrollY);
   },
 
 };
