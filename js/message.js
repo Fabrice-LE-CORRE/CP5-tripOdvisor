@@ -34,8 +34,14 @@ const message = {
   remove() {
     const messages = document.querySelectorAll('.message');
 
-    for (const oldMessage of messages) {
-      oldMessage.remove();
-    }
+    // for (const oldMessage of 'messages') {
+    //   // console.log(oldMessage);
+    //   oldMessage.remove();
+    // }
+
+    // équivalent à :
+    // pour chaque élément d'un TABLEAU, 
+    // j'exécute des instructions
+    messages.forEach((oldMessage) => oldMessage.remove());
   },
 };
