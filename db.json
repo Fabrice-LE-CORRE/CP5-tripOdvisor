@@ -7,52 +7,16 @@
     {
       "id": "2",
       "title": "JSON Server is awesome"
-    }
-  ],
-  "comments": [
-    {
-      "id": "1",
-      "body": "Great post!",
-      "postId": 1
     },
     {
-      "id": "2",
-      "body": "Thanks!",
-      "postId": 1
+      "id": "aade",
+      "title": "Bonjour les amis"
     }
   ],
-  "newsletters": [
+ "newsletters": [
     {
       "id": "1",
       "email": "example@example.com"
-    },
-    {
-      "id": "77bd",
-      "email": "polo@milo.fr"
-    },
-    {
-      "id": "86a2",
-      "email": "polo@milo.fr"
-    },
-    {
-      "id": "56eb",
-      "email": "polo@milo.fr"
-    },
-    {
-      "id": "1f85",
-      "email": "polo@milo.fr"
-    },
-    {
-      "id": "3efa",
-      "email": "polo@milo.fr"
-    },
-    {
-      "id": "802d",
-      "email": "polo@milo.fr"
-    },
-    {
-      "id": "3dcc",
-      "email": "polo@milo.fr"
-    }
+    }   
   ]
 }

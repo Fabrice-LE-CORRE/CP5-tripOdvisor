@@ -78,7 +78,7 @@ const newsletter = {
   getEmails: async function () {
     try {
       const response = await axios.get('http://localhost:3000/newsletters');
-      console.log('Enregistrements actuels:', response.data);
+      console.log('Enregistrements des e-mails actuels:', response.data);
     } catch (error) {
       console.error('Erreur lors de la récupération des e-mails:', error);
     }
