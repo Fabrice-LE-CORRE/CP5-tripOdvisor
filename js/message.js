@@ -15,8 +15,6 @@ const message = {
 
     parent.prepend(messageElement);
 
-    // `setTimeout` exécute du code passé en handler
-    // au bout de X ms
     setTimeout(message.remove, 2000);
   },
 
@@ -26,22 +24,12 @@ const message = {
   error(content, parent) {
     message.addTo(content, parent, 'error');
   },
-  // utilisation des fléchées
   warning: (content, parent) => {
     message.addTo(content, parent, 'warning');
   },
 
   remove() {
     const messages = document.querySelectorAll('.message');
-
-    // for (const oldMessage of 'messages') {
-    //   // console.log(oldMessage);
-    //   oldMessage.remove();
-    // }
-
-    // équivalent à :
-    // pour chaque élément d'un TABLEAU, 
-    // j'exécute des instructions
     messages.forEach((oldMessage) => oldMessage.remove());
   },
 };
