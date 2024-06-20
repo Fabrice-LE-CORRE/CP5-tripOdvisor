@@ -1,4 +1,3 @@
-// message.test.js
 const message = require('./message');
 
 describe('Message Module', () => {

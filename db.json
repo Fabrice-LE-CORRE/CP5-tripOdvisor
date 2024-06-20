@@ -1,11 +1,36 @@
 {
-    "posts": [
-      { "id": 1, "title": "Hello World" },
-      { "id": 2, "title": "JSON Server is awesome" }
-    ],
-    "comments": [
-      { "id": 1, "body": "Great post!", "postId": 1 },
-      { "id": 2, "body": "Thanks!", "postId": 1 }
-    ]
-  }
-  
+  "posts": [
+    {
+      "id": "1",
+      "title": "Hello World"
+    },
+    {
+      "id": "2",
+      "title": "JSON Server is awesome"
+    },
+    {
+      "id": "7f7f",
+      "title": "Salut zouzou"
+    },
+    {
+      "id": "1153",
+      "title": "prou"
+    },
+    {
+      "id": "7763",
+      "title": "c'est la fete des galinacé"
+    }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "body": "Great post!",
+      "postId": 1
+    },
+    {
+      "id": "2",
+      "body": "Thanks!",
+      "postId": 1
+    }
+  ]
+}
