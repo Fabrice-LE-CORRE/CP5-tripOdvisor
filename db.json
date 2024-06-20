@@ -7,18 +7,6 @@
     {
       "id": "2",
       "title": "JSON Server is awesome"
-    },
-    {
-      "id": "7f7f",
-      "title": "Salut zouzou"
-    },
-    {
-      "id": "1153",
-      "title": "prou"
-    },
-    {
-      "id": "7763",
-      "title": "c'est la fete des galinacé"
     }
   ],
   "comments": [
@@ -31,6 +19,40 @@
       "id": "2",
       "body": "Thanks!",
       "postId": 1
+    }
+  ],
+  "newsletters": [
+    {
+      "id": "1",
+      "email": "example@example.com"
+    },
+    {
+      "id": "77bd",
+      "email": "polo@milo.fr"
+    },
+    {
+      "id": "86a2",
+      "email": "polo@milo.fr"
+    },
+    {
+      "id": "56eb",
+      "email": "polo@milo.fr"
+    },
+    {
+      "id": "1f85",
+      "email": "polo@milo.fr"
+    },
+    {
+      "id": "3efa",
+      "email": "polo@milo.fr"
+    },
+    {
+      "id": "802d",
+      "email": "polo@milo.fr"
+    },
+    {
+      "id": "3dcc",
+      "email": "polo@milo.fr"
     }
   ]
 }
