@@ -1,22 +1,14 @@
 {
   "posts": [
     {
-      "id": "1",
-      "title": "Hello World"
-    },
-    {
-      "id": "2",
-      "title": "JSON Server is awesome"
-    },
-    {
-      "id": "aade",
-      "title": "Bonjour les amis"
+      "id": "f25f",
+      "title": "Bonjour le jury"
     }
   ],
- "newsletters": [
+  "newsletters": [
     {
-      "id": "1",
-      "email": "example@example.com"
-    }   
+      "id": "6d7f",
+      "email": "passagetp@tp.fr"
+    }
   ]
 }

@@ -3,7 +3,7 @@ const path = require('path');
 const jsonServer = require('json-server');
 
 const app = express();
-const PORT = 3001;
+const PORT = 3000;
 
 // Servir les fichiers statiques depuis le répertoire 'public'
 app.use(express.static(path.join(__dirname, 'public')));
